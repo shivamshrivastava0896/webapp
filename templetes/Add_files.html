@@ -1,0 +1,14 @@
+{% extends 'layout.html' %}
+{% block body %}
+  <a class="btn btn-success" href="/Download_Files">Download Files</a>
+  <a class="btn btn-success" href="/delete_uploaded_Files">Delete Uploaded Files</a>
+   <hr>
+  <h1>File Upload</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" enctype=multipart/form-data>
+      <div>
+      <input type=file name=file>
+      </div>
+    <p><input class="btn btn-primary" type="submit" value="Upload">
+  </form>
+{% endblock %}

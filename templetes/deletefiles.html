@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome {{current_user.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th></th>
+      <th></th>
+    </tr>
+    {% for file in filez %}
+      <tr>
+        <td>{{file.name}}</td>
+        <td>{{file.Date}}</td>
+        <td><a href="deletefile/{{file.id}}" class="btn btn-danger pull-right">Delete</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

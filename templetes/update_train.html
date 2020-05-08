@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome now you can update you Training {{current_user.username}}</small></h1>
+
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Author</th>
+      <th>Date</th>
+      <th>Total</th>
+      <th>completed</th>
+      <th></th>
+    </tr>
+    {% for tview1 in tview %}
+      <tr>
+        <td>{{ (tview.index(tview1))+1}}</td>
+        <td>{{tview1.username}}</td>
+        <td>{{tview1.Training_name}}</td>
+        <td>{{tview1.Date}}</td>
+        <td>{{tview1.Total}}</td>
+        <td>{{tview1.completed}}</td>
+
+        <td><a href="UPDATE-TRAIN/{{tview1.id}}" class="btn btn-danger pull-right">Update</a></td>
+        <td>
+        </td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+   <hr>
+  <h1>VIEW OF TRAINING</h1>
+  <h2>Which training do you want to VIEW </h2>
+  <form method="POST" action="">
+
+       <div class="form-group">
+      <label>Training</label>
+      <select name="Training">
+    <option value="DLF">DLF</option>
+    <option value="MEET">MEETS</option>
+      </select>
+    </div>
+    <p><input class="btn btn-primary" type="submit" value="Submit">
+  </form>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <div class="jumbotron text-center">
+    <h1>WIND EQUA IDC-BDC7C "Wind Telecom S.p.A"</h1>
+    <p class="lead">Wind Telecom S.p.A. (former Weather Investments S.p.A), was a privately held telecommunications investment company previously 97% controlled by the Sawiris family (and Mr. Naguib Sawiris) and now owned by the multinational telecommunications company Veon (formerly VimpelCom).</p>
+    {% if session.logged_in == NULL %}
+      <a href="/register" class="btn btn-primary btn-lg">Register</a>
+      <a href="/login" class="btn btn-success btn-lg">Login</a>
+    {% endif %}
+  </div>
+{% endblock %}

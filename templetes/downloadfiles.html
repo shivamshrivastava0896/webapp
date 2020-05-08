@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Dashboard <small> Welcome {{current_user.username}}</small></h1>
+  <hr>
+  <table class="table table-striped">
+    <tr>
+      <th>id</th>
+      <th>Name</th>
+      <th>Date</th>
+
+
+    </tr>
+    {% for y in view %}
+      <tr>
+        <td>{{y.id}}</td>
+        <td>{{y.name}}</td>
+        <td>{{y.Date}}</td>
+        <td><a href="downloadfiles/{{y.id}}" class="btn btn-success pull-right">Download</a></td>
+      </tr>
+    {% endfor %}
+  </table>
+{% endblock %}
